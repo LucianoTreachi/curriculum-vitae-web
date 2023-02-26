@@ -196,7 +196,7 @@ header .image img {
   cursor: pointer;
 }
 
-.ri-menu-line {
+.open-menu {
   z-index: 10;
   position: fixed;
   top: 50px;
@@ -209,7 +209,7 @@ header .image img {
   cursor: pointer;
 }
 
-.ri-close-line {
+.close-menu {
   position: absolute;
   top: 50px;
   right: 2rem;
