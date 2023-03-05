@@ -201,7 +201,6 @@ header .image img {
   position: fixed;
   top: 50px;
   right: 2rem;
-  font-size: 2.5rem;
   color: #ffffff;
   background-color: var(--color-01);
   padding: .8rem;
