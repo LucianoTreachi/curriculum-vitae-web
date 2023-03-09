@@ -12,10 +12,7 @@
 - HTML5
 - CSS3
 - Javascript
-
-## Librerías JS utilizadas
-
-- [Particles js](https://vincentgarreau.com/particles.js/)
+- Particles js
 
 ## Autor
 **Luciano Treachi**
