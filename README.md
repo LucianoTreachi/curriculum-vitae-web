@@ -4,10 +4,10 @@
 
 ## Descripción
 
-<p>Diseñé y desarrollé un modelo de Currículum Vitae Web, una opción creativa que cada vez está ganando más fuerza y presencia.</p> 
-<p>Se adapta perfectamente a desktop, tablet y mobile.</p> 
+<p>Diseñé y desarrollé un modelo de Currículum Vitae Web.</p>
+<p>Se adapta perfectamente a cualquier dispositivo: escritorio, tablet y móvil, lo que permite disfrutar de una experiencia de usuario fluida y cómoda en cualquier momento y en cualquier lugar.</p> 
 
-## Creado con
+## Desarrollado con
 
 - HTML5
 - CSS3
