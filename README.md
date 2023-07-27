@@ -4,15 +4,17 @@
 
 ## Descripción
 
-<p>Diseñé y desarrollé un modelo de Currículum Vitae Web.</p>
-<p>Se adapta perfectamente a cualquier dispositivo: escritorio, tablet y móvil, lo que permite disfrutar de una experiencia de usuario fluida y cómoda en cualquier momento y en cualquier lugar.</p> 
+<p>Diseñé y desarrollé un Currículum Web.</p>
+<p>Es 100% responsive. Se adapta perfectamente a cualquier dispositivo: escritorio, tablet y móvil.</p>
+<p>Además, cuenta con con la funcionalidad de Dark Mode, permitiendo cambiar a un modo oscuro para mayor comodidad visual.</p>
 
-## Desarrollado con
+## Tecnologías utilizadas
 
-- HTML5
-- CSS3
-- Javascript
-- Particles js
+<p>• HTML5</p>
+<p>• CSS3</p>
+<p>• JavaScript</p>
+<p>• Particles js</p>
 
 ## Autor
+
 **Luciano Treachi**
