@@ -2,15 +2,36 @@
 <html lang="es">
 
 <head>
-  <title>Luciano Treachi | CV</title>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Luciano Treachi - Curriculum Vitae">
+  <title>Luciano Treachi | CV</title>
+  <meta name="description"
+    content="Bienvenido a mi Curriculum Vitae en línea. Descubre mi experiencia laboral, habilidades, educación y proyectos destacados. ¡Conoce más sobre mí y mi trayectoria profesional!">
+
+  <!-- Preconnect -->
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+
+  <!-- Preload -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <link rel="preload" as="style" href="./css/styles.css">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
+  <link rel="stylesheet" href="./css/styles.css">
+
+  <!-- Scripts -->
+  <script src="./js/particles.min.js" defer></script>
+  <script src="./js/particles.js" defer></script>
+  <script src="./js/main.js" defer></script>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Luciano Treachi | CV">
-  <meta property="og:description" content="Luciano Treachi - Curriculum Vitae">
+  <meta property="og:description"
+    content="Bienvenido a mi Curriculum Vitae en línea. Descubre mi experiencia laboral, habilidades, educación y proyectos destacados. ¡Conoce más sobre mí y mi trayectoria profesional!">
   <meta property="og:url" content="https://luciano-curriculum-vitae.netlify.app/">
   <meta property="og:type" content="website">
   <meta property="og:image"
@@ -23,31 +44,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@LucianoTreachi">
   <meta name="twitter:title" content="Luciano Treachi | CV">
-  <meta name="twitter:description" content="Luciano Treachi - Curriculum Vitae">
+  <meta name="twitter:description"
+    content="Bienvenido a mi Curriculum Vitae en línea. Descubre mi experiencia laboral, habilidades, educación y proyectos destacados. ¡Conoce más sobre mí y mi trayectoria profesional!">
   <meta name="twitter:image"
     content="https://raw.githubusercontent.com/LucianoTreachi/Curriculum-Vitae/main/assets/readme/banner.jpg">
 
-  <!-- Google Fonts -->
-  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap">
-
   <!-- Favicon -->
   <link rel="shortcut icon" href="./assets/icons/favicon.svg">
-
-  <!-- Remix Icon -->
-  <link rel="preload" as="style" href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
-  <!-- CSS -->
-  <link rel="preload" as="style" href="./css/styles.css">
-  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
-
   <!-- Scroll to Top -->
   <a href="#" aria-label="volver arriba">
     <div class="scrollToTop-Btn">
@@ -57,24 +63,17 @@
 
   <div class="wrapper">
 
-    <!--===============================
-    HEADER AND NAV
-    ================================-->
-
     <header>
-
       <!-- Particles -->
       <div id="particles-js" class="particles-js"></div>
-
-      <!-- Profil Pic -->
+      <!-- Profile Pic -->
       <div class="image">
         <picture>
           <source srcset="./assets/img/profile-pic.avif" type="image/avif">
           <source srcset="./assets/img/profile-pic.webp" type="image/webp">
-          <img src="./assets/img/profile-pic.jpg" alt="Imagen de perfl">
+          <img src="./assets/img/profile-pic.jpg" alt="Imagen de perfil">
         </picture>
       </div>
-
       <!-- Navbar -->
       <nav>
         <div class="navbar">
@@ -86,27 +85,20 @@
           <a href="#experience">Experiencia</a>
           <a href="#education">Educación</a>
           <a href="#certificates">Certificaciones</a>
-
           <!-- Theme -->
           <i class="ri-moon-fill"></i>
         </div>
       </nav>
-
-      <!-- Hamburguer Menu -->
+      <!-- Hamburger Menu -->
       <img src="./assets/svg/menu-line.svg" alt="Menu" class="open-menu">
     </header>
-
-    <!--===============================
-    MAIN
-    ================================-->
 
     <main>
       <!--===== HOME =====-->
       <section class="section1">
         <div class="container">
           <h1>Luciano Treachi</h1>
-          <p>Desarrollador Frontend • Creador y Editor de contenido • Licenciado en Comunicación</p>
-          <a href="#contact" class="btn">Conocer Más <i class="ri-arrow-right-line"></i></a>
+          <p>Desarrollador Frontend enfocado en la experiencia de usuario y diseño de interfaz.</p>
         </div>
       </section>
 
@@ -114,8 +106,8 @@
       <section class="section2" id="contact">
         <div class="container">
           <h2 class="title-section">Contacto</h2>
-          <a href="https://api.whatsapp.com/send?phone=3516819562" target="_blank" aria-label="Enviar Whatsapp">
-            <i class="ri-whatsapp-fill"></i> Whatsapp
+          <a href="https://api.whatsapp.com/send?phone=3516819562" target="_blank" aria-label="Enviar WhatsApp">
+            <i class="ri-whatsapp-fill"></i> WhatsApp
           </a>
           <br>
           <a href="mailto:lucianotreachi@outlook.com" aria-label="Enviar Email">
@@ -162,8 +154,8 @@
             </picture>
 
             <picture>
-              <source srcset="./assets/icons/sass.webp" type="image/webp">
-              <img src="./assets/icons/sass.png" alt="SASS" title="SASS">
+              <source srcset="./assets/icons/js.webp" type="image/webp">
+              <img src="./assets/icons/js.png" alt="Javascript" title="Javascript">
             </picture>
 
             <picture>
@@ -172,8 +164,8 @@
             </picture>
 
             <picture>
-              <source srcset="./assets/icons/js.webp" type="image/webp">
-              <img src="./assets/icons/js.png" alt="Javascript" title="Javascript">
+              <source srcset="./assets/icons/sass.webp" type="image/webp">
+              <img src="./assets/icons/sass.png" alt="SASS" title="SASS">
             </picture>
 
             <picture>
@@ -190,21 +182,6 @@
               <source srcset="./assets/icons/npm.webp" type="image/webp">
               <img src="./assets/icons/npm.png" alt="NPM" title="NPM">
             </picture>
-
-            <picture>
-              <source srcset="./assets/icons/ps.webp" type="image/webp">
-              <img src="./assets/icons/ps.png" alt="Adobe Photoshop" title="Photoshop">
-            </picture>
-
-            <picture>
-              <source srcset="./assets/icons/pr.webp" type="image/webp">
-              <img src="./assets/icons/pr.png" alt="Adobe Premiere Pro" title="Premier Pro">
-            </picture>
-
-            <picture>
-              <source srcset="./assets/icons/fl.webp" type="image/webp">
-              <img src="./assets/icons/fl.png" alt="Fl Studio" title="Fl Studio">
-            </picture>
           </div>
         </div>
       </section>
@@ -213,7 +190,6 @@
       <section class="section4" id="experience">
         <div class="container">
           <h2 class="title-section">Experiencia Laboral</h2>
-
           <div class="box border1">
             <div class="info">
               <h3>Desarrollador Frontend</h3>
@@ -232,7 +208,6 @@
               </p>
             </div>
           </div>
-
           <div class="box border3">
             <div class="info">
               <h3>Creador de Contenido en Redes Sociales</h3>
@@ -248,7 +223,6 @@
               <p>Diseño gráfico | Edición de vídeo | Producción de contenido creativo</p>
             </div>
           </div>
-
           <div class="box border4">
             <div class="info">
               <h3>Reporter - Operaciones - Atención al cliente</h3>
@@ -264,7 +238,6 @@
               <p>Trabajo en equipo</p>
             </div>
           </div>
-
           <div class="box border5">
             <div class="info">
               <h3>Co-Creador de Proyecto</h3>
@@ -281,15 +254,13 @@
               <p>Desarrollo de Marca | Ventas | Marketing</p>
             </div>
           </div>
-
         </div>
       </section>
 
-      <!--===== EDUCACION =====-->
+      <!--===== EDUCACIÓN =====-->
       <section class="section4" id="education">
         <div class="container">
           <h2 class="title-section">Educación</h2>
-
           <div class="box">
             <div class="info">
               <h3>Alura Latam</h3>
@@ -298,13 +269,11 @@
               <p>Estudio finalizado</p>
               <br>
               <picture>
-                <source srcset="./assets/certificados/alura-800.avif" type="image/avif">
                 <source srcset="./assets/certificados/alura-800.webp" type="image/webp">
                 <img src="./assets/certificados/alura-800.jpg" alt="Certificado Alura Latam">
               </picture>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Coderhouse</h3>
@@ -313,13 +282,11 @@
               <p>Estudio finalizado</p>
               <br>
               <picture>
-                <source srcset="./assets/certificados/coderhouse-800.avif" type="image/avif">
                 <source srcset="./assets/certificados/coderhouse-800.webp" type="image/webp">
                 <img src="./assets/certificados/coderhouse-800.jpg" alt="Certificado Coderhouse">
               </picture>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Universidad Siglo 21</h3>
@@ -328,13 +295,11 @@
               <p>Estudio finalizado</p>
               <br>
               <picture>
-                <source srcset="./assets/certificados/siglo21.avif" type="image/avif">
                 <source srcset="./assets/certificados/siglo21.webp" type="image/webp">
                 <img src="./assets/certificados/siglo21.jpg" alt="Certificado Universidad Siglo 21">
               </picture>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Universidad Nacional de Córdoba</h3>
@@ -343,13 +308,11 @@
               <p>Estudio finalizado</p>
               <br>
               <picture>
-                <source srcset="./assets/certificados/universidad.avif" type="image/avif">
                 <source srcset="./assets/certificados/universidad.webp" type="image/webp">
                 <img src="./assets/certificados/universidad.jpg" alt="Certificado Universidad Nacional de Córdoba">
               </picture>
             </div>
           </div>
-
         </div>
       </section>
 
@@ -370,7 +333,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Flexbox</h3>
@@ -383,7 +345,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Layouts Responsivos</h3>
@@ -396,7 +357,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>CSS avanzado: 12 trucos</h3>
@@ -409,7 +369,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>CSS: 50 trucos</h3>
@@ -422,7 +381,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>CSS: Diseño Web Responsive</h3>
@@ -435,7 +393,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>CSS Avanzado</h3>
@@ -448,7 +405,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>CSS Esencial</h3>
@@ -461,7 +417,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Integración HTML y CSS Esencial</h3>
@@ -474,7 +429,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>HTML5 y CSS3 práctico: Formularios de Login y registro</h3>
@@ -487,7 +441,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>HTML Avanzado</h3>
@@ -500,7 +453,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>HTML Esencial</h3>
@@ -513,7 +465,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Semántica Web</h3>
@@ -526,7 +477,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Design Thinking: Experiencia del cliente</h3>
@@ -539,7 +489,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Diseño de Interfaz (UI) avanzado</h3>
@@ -552,7 +501,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Diseño de Interfaz (UI) esencial</h3>
@@ -565,7 +513,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>JavaScript: Clases</h3>
@@ -578,7 +525,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>JavaScript avanzado: Expresiones Regulares</h3>
@@ -591,7 +537,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>JavaScript Esencial</h3>
@@ -604,7 +549,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>GitHub para programadores</h3>
@@ -617,7 +561,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Git y GitHub</h3>
@@ -630,7 +573,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>HTML5 y CSS3 parte 4</h3>
@@ -643,7 +585,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>HTML5 y CSS3 parte 3</h3>
@@ -656,7 +597,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>HTML5 y CSS3 parte 2</h3>
@@ -669,7 +609,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>HTML5 y CSS3 parte 1</h3>
@@ -682,10 +621,9 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
-              <h3>Lógica de Programación: prácticando con juegos y animaciones</h3>
+              <h3>Lógica de Programación: practicando con juegos y animaciones</h3>
               <h4>Alura Latam</h4>
               <p>2022</p>
               <a href="https://app.aluracursos.com/certificate/lucianotreachi/logica-de-programacion-juegos-animaciones"
@@ -695,7 +633,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Lógica de Programación: conceptos primordiales</h3>
@@ -708,7 +645,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Lógica de Programación: primeros pasos</h3>
@@ -721,7 +657,6 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
           <div class="box">
             <div class="info">
               <h3>Desarrollo Web</h3>
@@ -733,27 +668,20 @@
               <i class="ri-award-fill"></i>
             </div>
           </div>
-
         </div>
       </section>
-
     </main>
-
-    <!--===============================
-    FOOTER
-    ================================-->
 
     <footer>
       <p>Desarrollado por Luciano Treachi</p>
-
       <div class="socials">
-        <a href="https://api.whatsapp.com/send?phone=3516819562" target="_blank" aria-label="Whatsapp">
+        <a href="https://api.whatsapp.com/send?phone=3516819562" target="_blank" aria-label="WhatsApp">
           <i class="ri-whatsapp-fill"></i>
         </a>
         <a href="mailto:lucianotreachi@outlook.com" aria-label="Email">
           <i class="ri-mail-fill"></i>
         </a>
-        <a href="https://www.linkedin.com/in/luciano-treachi/" target="_blank" aria-label="Linkedin">
+        <a href="https://www.linkedin.com/in/luciano-treachi/" target="_blank" aria-label="LinkedIn">
           <i class="ri-linkedin-box-fill"></i>
         </a>
         <a href="https://github.com/LucianoTreachi" target="_blank" aria-label="Github">
@@ -761,20 +689,7 @@
         </a>
       </div>
     </footer>
-
   </div>
-
-  <!--===============================
-  SCRIPT
-  ================================-->
-
-  <!-- Particles Js -->
-  <script src="./js/particles.min.js"></script>
-  <script src="./js/particles.js"></script>
-
-  <!-- Main Js -->
-  <script src="js/main.js"></script>
-
 </body>
 
 </html>

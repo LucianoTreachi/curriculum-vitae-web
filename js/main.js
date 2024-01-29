@@ -21,7 +21,7 @@ links.forEach((link) => {
 
 ////////// SCROLL TO TOP //////////
 const scrollTopBtn = document.querySelector(".scrollToTop-Btn");
-  
+
 window.addEventListener("scroll", function () {
   scrollTopBtn.classList.toggle("active", window.scrollY > 500);
 });
@@ -51,24 +51,25 @@ const sound = new Audio("assets/audio/sonido.mp3");
 
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
-  
+
 const getCurrentTheme = () =>
   body.classList.contains(darkTheme) ? "dark" : "light";
 
 const getCurrentIcon = () =>
   themeButton.classList.contains(iconTheme) ? "moon" : "sun";
-  
+
 if (selectedTheme) {
   body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
   themeButton.classList[selectedIcon === "moon" ? "add" : "remove"](iconTheme);
 }
 
 themeButton.addEventListener("click", () => {
-  
+
   body.classList.toggle(darkTheme);
   themeButton.classList.toggle(iconTheme);
+  navbar.classList.remove("active");
   sound.play();
-  
+
   localStorage.setItem("selected-theme", getCurrentTheme());
   localStorage.setItem("selected-icon", getCurrentIcon());
 });

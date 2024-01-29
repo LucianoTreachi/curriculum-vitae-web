@@ -5,7 +5,7 @@ GLOBAL
 /* ----- Light Theme -----*/
 :root {
   scroll-behavior: smooth;
-  
+
   --color-01: #0297c4;
   --black: #181818;
   --white: #ffffff;
@@ -85,6 +85,7 @@ SCROLL TO TOP
   align-items: center;
   cursor: pointer;
   opacity: 0;
+  visibility: hidden;
   transition: .5s ease;
 }
 
@@ -95,8 +96,8 @@ SCROLL TO TOP
 
 .scrollToTop-Btn.active {
   right: 2rem;
-  pointer-events: all;
   opacity: 1;
+  visibility: visible;
 }
 
 /*=============================== 
@@ -127,7 +128,7 @@ header {
 header .image {
   position: absolute;
   top: 50px;
-  left: 60px;
+  left: 40px;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -235,6 +236,7 @@ SECTION 1: HOME
 
 .section1 .container h1 {
   font-size: 3rem;
+  font-weight: 600;
   color: var(--black);
   text-transform: capitalize;
 }
@@ -247,30 +249,6 @@ SECTION 1: HOME
 .section1 .container p:nth-child(3) {
   font-size: 1.4rem;
   color: var(--grey);
-}
-
-.section1 .container .btn {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1.5rem 2.5rem;
-  font-size: 1.6rem;
-  border: 1px solid var(--color-01);
-  border: none;
-  border-radius: 5px;
-  color: #ffffff;
-  background: var(--color-01);
-  background: linear-gradient(to right, #2193b0, #6dd5ed);
-  box-shadow: -1px -1px 14px -4px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  transition: .3s;
-}
-
-.section1 .container .btn i {
-  vertical-align: middle;
-}
-
-.section1 .container .btn:hover {
-  background: var(--color-01);
 }
 
 /*=============================== 
@@ -496,16 +474,11 @@ RESPONSIVE
 @media (max-width: 500px) {
 
   header .image {
-    left: 50%;
-    transform: translateX(-50%);
+    left: 1rem;
   }
 
   .section1 {
     padding: 12rem 2rem 0;
-  }
-
-  .section1 .container {
-    text-align: center;
   }
 
   .section2,
