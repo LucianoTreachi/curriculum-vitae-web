@@ -316,7 +316,7 @@ SECTION 3: HABILIDADES
 }
 
 /*==================================================== 
-SECTION 4: EXPERIENCIA - EDUCACION - CERTIFICACIONES 
+SECTION 4: EXPERIENCIA - EDUCACION 
 =====================================================*/
 
 .section4 {
@@ -379,36 +379,8 @@ SECTION 4: EXPERIENCIA - EDUCACION - CERTIFICACIONES
   font-size: 1.3rem;
 }
 
-.section4 .box .info img {
-  width: 50%;
-  border-radius: 5px;
-}
-
-.section4 .box .info .btn {
-  display: inline-block;
-  margin-top: 1.5rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-  color: var(--accent);
-  transition: .3s;
-}
-
-.section4 .box .info .btn i {
-  font-size: 1.6rem;
-  vertical-align: middle;
-}
-
-#border-none {
-  border-bottom: 0;
-}
-
-.ri-award-fill {
-  position: absolute;
-  top: 22px;
-  right: 10px;
-  color: var(--black);
-  font-size: 3rem;
-  opacity: .85;
+#education .container {
+  border-bottom: none;
 }
 
 /*=============================== 
