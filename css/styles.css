@@ -87,7 +87,7 @@ SCROLL TO TOP
   height: 45px;
   background: var(--accent);
   font-size: 1em;
-  border-radius: 3px;
+  border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,15 +97,16 @@ SCROLL TO TOP
   transition: .5s ease;
 }
 
-.scrollToTop-Btn i {
-  font-size: 2rem;
-  color: #ffffff;
-}
-
 .scrollToTop-Btn.active {
   right: 2rem;
   opacity: 1;
   visibility: visible;
+}
+
+.scrollToTop-Btn svg {
+  width: 25px;
+  height: 25px;
+  fill: #ffffff;
 }
 
 /*=============================== 
@@ -204,7 +205,9 @@ header .image img {
   position: fixed;
   top: 50px;
   right: 2rem;
-  color: #ffffff;
+  fill: #ffffff;
+  width: 40px;
+  height: 40px;
   background-color: var(--accent);
   padding: .8rem;
   border-radius: 5px;
@@ -262,6 +265,7 @@ SECTION 2: CONTACTO - SOBRE MI
 .section2 .container a {
   display: inline-block;
   font-size: 1.6rem;
+  font-weight: 500;
   color: var(--black);
   opacity: 0.8;
   transition: all .4s;
@@ -279,9 +283,10 @@ SECTION 2: CONTACTO - SOBRE MI
   color: var(--accent);
 }
 
-.section2 .container i {
-  font-size: 2.5rem;
-  color: #8f8f8f;
+.section2 .container svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: #8f8f8f;
   vertical-align: middle;
 }
 
