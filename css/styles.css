@@ -2,34 +2,37 @@
 GLOBAL
 ================================*/
 
-/* ----- Light Theme -----*/
 :root {
   scroll-behavior: smooth;
 
-  --color-01: #0297c4;
   --black: #181818;
   --white: #ffffff;
   --grey: #8d8d8d;
+  --accent: #0297c4;
+  --body: #d7dde8;
   --wrapper: #f5f5f7;
   --header: #d6e9ff;
   --navbar: rgba(245, 245, 245, .7);
   --border-img: #f0f0f0;
   --border-bottom: rgba(17, 17, 17, 0.2);
   --box: #ffffff;
-  --box-shadow: -1px -1px 14px -4px rgba(0, 0, 0, 0.4);
+  --box-shadow: 0 8px 16px -3px rgba(100, 100, 100, 0.1);
+  --paragraph-weight: 400;
 }
 
 /* ----- Dark Theme -----*/
 .dark-theme {
-  --black: #ffffff;
+  --black: #f0f0f0;
   --white: #181818;
+  --body: #141e30;
   --wrapper: #0e141b;
   --header: #000000;
   --navbar: rgba(17, 17, 17, .7);
   --border-img: #0297c4;
   --border-bottom: rgba(240, 240, 240, 0.2);
   --box: #182029;
-  --box-shadow: none;
+  --box-shadow: 0 8px 16px -3px #18202950;
+  --paragraph-weight: 300;
 }
 
 * {
@@ -45,9 +48,14 @@ html {
 }
 
 body {
-  background: #757f9a;
-  background: -webkit-linear-gradient(to right, #757f9a, #d7dde8);
-  background: linear-gradient(to right, #757f9a, #d7dde8);
+  background: var(--body)
+}
+
+p {
+  font-size: 1.6rem;
+  font-weight: var(--paragraph-weight);
+  color: var(--black);
+  opacity: 0.8;
 }
 
 li {
@@ -60,9 +68,9 @@ a {
 
 .title-section {
   font-size: 2rem;
-  color: var(--black);
+  font-weight: 700;
+  color: var(--accent);
   text-transform: uppercase;
-  color: var(--color-01);
   margin-bottom: 1rem;
 }
 
@@ -77,7 +85,7 @@ SCROLL TO TOP
   bottom: 20px;
   width: 45px;
   height: 45px;
-  background: var(--color-01);
+  background: var(--accent);
   font-size: 1em;
   border-radius: 3px;
   display: flex;
@@ -122,7 +130,7 @@ header {
   height: 150px;
   background-color: var(--header);
   border-radius: 0px 0px 5px 5px;
-  box-shadow: 0 10px 10px -11px #111111;
+  box-shadow: var(--box-shadow);
 }
 
 header .image {
@@ -170,7 +178,7 @@ header .image img {
 }
 
 .navbar a.active {
-  border-bottom: 4px solid var(--color-01);
+  border-bottom: 4px solid var(--accent);
 }
 
 .ri-moon-fill {
@@ -197,7 +205,7 @@ header .image img {
   top: 50px;
   right: 2rem;
   color: #ffffff;
-  background-color: var(--color-01);
+  background-color: var(--accent);
   padding: .8rem;
   border-radius: 5px;
   cursor: pointer;
@@ -209,7 +217,7 @@ header .image img {
   right: 2rem;
   font-size: 2.5rem;
   color: #ffffff;
-  background-color: var(--color-01);
+  background-color: var(--accent);
   padding: .8rem;
   border-radius: 5px;
   cursor: pointer;
@@ -229,20 +237,13 @@ SECTION 1: HOME
 }
 
 .section1 .container h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
   color: var(--black);
+  opacity: 0.9;
+  letter-spacing: -0.02em;
+  line-height: 110%;
   text-transform: capitalize;
-}
-
-.section1 .container p:nth-child(2) {
-  font-size: 1.6rem;
-  color: var(--black);
-}
-
-.section1 .container p:nth-child(3) {
-  font-size: 1.4rem;
-  color: var(--grey);
 }
 
 /*=============================== 
@@ -258,16 +259,11 @@ SECTION 2: CONTACTO - SOBRE MI
   border-bottom: 3px solid var(--border-bottom);
 }
 
-.section2 .container p {
-  font-size: 1.6rem;
-  color: var(--black);
-}
-
 .section2 .container a {
   display: inline-block;
   font-size: 1.6rem;
-  font-weight: 400;
   color: var(--black);
+  opacity: 0.8;
   transition: all .4s;
 }
 
@@ -280,7 +276,7 @@ SECTION 2: CONTACTO - SOBRE MI
 }
 
 .section2 .container a:hover {
-  color: var(--color-01);
+  color: var(--accent);
 }
 
 .section2 .container i {
@@ -300,11 +296,6 @@ SECTION 3: HABILIDADES
 .section3 .container {
   padding-bottom: 4rem;
   border-bottom: 3px solid var(--border-bottom);
-}
-
-.section3 .container p {
-  font-size: 1.6rem;
-  color: var(--black);
 }
 
 .logos {
@@ -381,7 +372,6 @@ SECTION 4: EXPERIENCIA - EDUCACION - CERTIFICACIONES
 
 .section4 .box .info p {
   font-size: 1.3rem;
-  color: var(--black);
 }
 
 .section4 .box .info img {
@@ -393,7 +383,8 @@ SECTION 4: EXPERIENCIA - EDUCACION - CERTIFICACIONES
   display: inline-block;
   margin-top: 1.5rem;
   font-size: 1.6rem;
-  color: var(--color-01);
+  font-weight: 500;
+  color: var(--accent);
   transition: .3s;
 }
 
@@ -443,7 +434,7 @@ footer {
 }
 
 .socials a:hover {
-  color: var(--color-01);
+  color: var(--accent);
 }
 
 /*=============================== 
@@ -465,7 +456,7 @@ RESPONSIVE
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
 
   header .image {
     left: 1rem;
@@ -481,6 +472,10 @@ RESPONSIVE
     padding: 4rem 2rem 0;
   }
 
+  .section1 .container h1 {
+    font-size: 3.2rem;
+  }
+
   footer {
     padding: 4rem 2rem;
   }
@@ -492,12 +487,5 @@ RESPONSIVE
 
   .section4 .box .info img {
     width: 100%;
-  }
-}
-
-@media (max-width: 300px) {
-
-  html {
-    font-size: 55%;
   }
 }
