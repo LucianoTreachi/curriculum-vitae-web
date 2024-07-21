@@ -18,6 +18,10 @@ links.forEach((link) => {
   })
 })
 
+window.addEventListener("scroll", () => {
+  navbar.classList.remove('active');
+})
+
 
 ////////// SCROLL TO TOP //////////
 const scrollTopBtn = document.querySelector(".scrollToTop-Btn");
