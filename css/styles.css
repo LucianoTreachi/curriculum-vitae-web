@@ -44,7 +44,7 @@ GLOBAL
 html {
   font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
 }
 
 body {
