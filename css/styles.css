@@ -453,6 +453,10 @@ RESPONSIVE
     font-size: 3.2rem;
   }
 
+  .section1 .container p {
+    width: 80%;
+  }
+
   footer {
     padding: 4rem 2rem;
   }
