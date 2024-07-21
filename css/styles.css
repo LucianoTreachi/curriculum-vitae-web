@@ -247,6 +247,7 @@ SECTION 1: HOME
   letter-spacing: -0.02em;
   line-height: 110%;
   text-transform: capitalize;
+  margin-bottom: 0.5rem;
 }
 
 /*=============================== 
@@ -455,6 +456,10 @@ RESPONSIVE
 
   .section1 .container p {
     width: 80%;
+  }
+
+  .section2 .container a:hover {
+    color: var(--black);
   }
 
   footer {
