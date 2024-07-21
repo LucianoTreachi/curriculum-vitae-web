@@ -218,8 +218,9 @@ header .image img {
   position: absolute;
   top: 50px;
   right: 2rem;
-  font-size: 2.5rem;
-  color: #ffffff;
+  fill: #ffffff;
+  width: 40px;
+  height: 40px;
   background-color: var(--accent);
   padding: .8rem;
   border-radius: 5px;
@@ -269,7 +270,6 @@ SECTION 2: CONTACTO - SOBRE MI
   font-weight: 500;
   color: var(--black);
   opacity: 0.8;
-  transition: all .4s;
 }
 
 .section2 .container a:nth-child(2) {
@@ -405,14 +405,14 @@ footer {
   gap: 1.5rem;
 }
 
-.socials a {
-  font-size: 2.5rem;
-  color: var(--grey);
-  transition: color .4s;
+.socials svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  fill: var(--grey);
 }
 
-.socials a:hover {
-  color: var(--accent);
+.socials svg:hover {
+  fill: var(--accent);
 }
 
 /*=============================== 
