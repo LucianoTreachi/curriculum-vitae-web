@@ -462,10 +462,6 @@ RESPONSIVE
     color: var(--black);
   }
 
-  footer {
-    padding: 4rem 2rem;
-  }
-
   .logos img {
     width: 30px;
     height: 30px;
@@ -473,5 +469,13 @@ RESPONSIVE
 
   .section4 .box .info img {
     width: 100%;
+  }
+
+  footer {
+    padding: 4rem 2rem;
+  }
+
+  .socials svg:hover {
+    fill: var(--grey);
   }
 }
