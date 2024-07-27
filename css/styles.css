@@ -51,11 +51,19 @@ body {
   background: var(--body)
 }
 
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
 p {
   font-size: 1.6rem;
   font-weight: var(--paragraph-weight);
   color: var(--black);
   opacity: 0.8;
+  text-wrap: pretty;
 }
 
 li {
@@ -365,13 +373,14 @@ SECTION 4: EXPERIENCIA - EDUCACION
 
 .section4 .box .info h3 {
   font-size: 1.7rem;
+  font-weight: 600;
   color: var(--black);
   width: 90%;
 }
 
 .section4 .box .info h4 {
   font-size: 1.5rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--black);
   margin-bottom: 1rem;
 }
