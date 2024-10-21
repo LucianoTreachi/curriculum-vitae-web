@@ -83,10 +83,10 @@ a {
 }
 
 /*=============================== 
-SCROLL TO TOP
+SCROLL TO TOP LINK
 ================================*/
 
-.scrollToTop-Btn {
+.scroll-to-top-link {
   z-index: 10;
   position: fixed;
   right: 0;
@@ -94,7 +94,7 @@ SCROLL TO TOP
   width: 45px;
   height: 45px;
   background: var(--accent);
-  font-size: 1em;
+  font-size: 1rem;
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -105,13 +105,13 @@ SCROLL TO TOP
   transition: .5s ease;
 }
 
-.scrollToTop-Btn.active {
+.scroll-to-top-link.active {
   right: 2rem;
   opacity: 1;
   visibility: visible;
 }
 
-.scrollToTop-Btn svg {
+.scroll-to-top-link svg {
   width: 25px;
   height: 25px;
   fill: #ffffff;
@@ -208,31 +208,39 @@ header .image img {
   cursor: pointer;
 }
 
-.open-menu {
+.open-menu-button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent);
+  padding: .8rem;
   z-index: 10;
   position: fixed;
   top: 50px;
   right: 2rem;
-  fill: #ffffff;
-  width: 40px;
-  height: 40px;
-  background-color: var(--accent);
-  padding: .8rem;
-  border-radius: 5px;
   cursor: pointer;
 }
 
-.close-menu {
+.open-menu-button svg {
+  fill: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.close-menu-button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent);
+  padding: .8rem;
   position: absolute;
   top: 50px;
   right: 2rem;
-  fill: #ffffff;
-  width: 40px;
-  height: 40px;
-  background-color: var(--accent);
-  padding: .8rem;
-  border-radius: 5px;
   cursor: pointer;
+}
+
+.close-menu-button svg {
+  fill: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 /*=============================== 

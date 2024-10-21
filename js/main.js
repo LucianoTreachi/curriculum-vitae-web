@@ -1,14 +1,14 @@
 ////////// MENU //////////
-const openMenu = document.querySelector(".open-menu");
+const openMenuButton = document.querySelector(".open-menu-button");
 const navbar = document.querySelector(".navbar");
 const links = document.querySelectorAll(".navbar a")
-const closeMenu = document.querySelector(".close-menu");
+const closeMenuButton = document.querySelector(".close-menu-button");
 
-openMenu.addEventListener("click", () => {
+openMenuButton.addEventListener("click", () => {
   navbar.classList.add("active");
 })
 
-closeMenu.addEventListener("click", () => {
+closeMenuButton.addEventListener("click", () => {
   navbar.classList.remove("active");
 })
 
@@ -23,12 +23,22 @@ window.addEventListener("scroll", () => {
 })
 
 
-////////// SCROLL TO TOP //////////
-const scrollTopBtn = document.querySelector(".scrollToTop-Btn");
+////////// SCROLL TO TOP LINK //////////
+const scrollToTopLink = document.querySelector(".scroll-to-top-link");
 
 window.addEventListener("scroll", function () {
-  scrollTopBtn.classList.toggle("active", window.scrollY > 500);
+  scrollToTopLink.classList.toggle("active", window.scrollY > 500);
 });
+
+scrollToTopLink.addEventListener("click", (event) => {
+  event.preventDefault();
+
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+  });
+})
 
 
 ////////// ACTIVE LINK WITH SCROLL //////////
