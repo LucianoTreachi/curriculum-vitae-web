@@ -79,7 +79,17 @@ const getCurrentIcon = () =>
 
 if (selectedTheme) {
   body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
-  themeButton.querySelector('i').classList[selectedIcon === "moon" ? "add" : "remove"](iconTheme);
+
+  if (selectedTheme === "dark") {
+    themeButton.querySelector('i').classList.add(moonIcon);
+    themeButton.querySelector('i').classList.remove(iconTheme);
+  } else {
+    themeButton.querySelector('i').classList.add(iconTheme);
+    themeButton.querySelector('i').classList.remove(moonIcon);
+  }
+} else {
+  body.classList.remove(darkTheme);
+  themeButton.querySelector('i').classList.add(iconTheme);
 }
 
 themeButton.addEventListener("click", () => {
