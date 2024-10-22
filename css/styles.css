@@ -192,6 +192,11 @@ header .image img {
   border-bottom: 4px solid var(--accent);
 }
 
+.theme-button {
+  border: none;
+  background: none;
+}
+
 .ri-moon-fill {
   font-size: 1.9rem;
   color: lightskyblue;
