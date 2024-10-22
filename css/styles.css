@@ -13,6 +13,7 @@ GLOBAL
   --wrapper: #f5f5f7;
   --header: #d6e9ff;
   --navbar: rgba(245, 245, 245, .7);
+  --bg-button-theme: #181818;
   --border-img: #f0f0f0;
   --border-bottom: rgba(17, 17, 17, 0.2);
   --box: #ffffff;
@@ -28,6 +29,7 @@ GLOBAL
   --wrapper: #0e141b;
   --header: #000000;
   --navbar: rgba(17, 17, 17, .7);
+  --bg-button-theme: #1e2833;
   --border-img: #0297c4;
   --border-bottom: rgba(240, 240, 240, 0.2);
   --box: #182029;
@@ -194,25 +196,22 @@ header .image img {
 
 .theme-button {
   border: none;
-  background: none;
+  background-color: var(--bg-button-theme);
+  padding: 1rem;
+  border-radius: 100%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 
 .ri-moon-fill {
-  font-size: 1.9rem;
+  font-size: 2.4rem;
   color: lightskyblue;
-  background-color: #222222;
-  padding: 1rem;
-  border-radius: 100%;
-  cursor: pointer;
 }
 
 .ri-sun-fill {
-  font-size: 1.9rem;
+  font-size: 2.4rem;
   color: lightsalmon;
-  background-color: #182029;
-  padding: 1rem;
-  border-radius: 100%;
-  cursor: pointer;
 }
 
 .open-menu-button {

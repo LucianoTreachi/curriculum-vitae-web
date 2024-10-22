@@ -61,10 +61,11 @@ window.addEventListener("scroll", activeLinks);
 
 
 //////// THEME ////////// 
-const themeButton = document.querySelector(".ri-moon-fill");
+const themeButton = document.querySelector(".theme-button");
 const body = document.body;
 const darkTheme = "dark-theme";
 const iconTheme = "ri-sun-fill";
+const moonIcon = "ri-moon-fill";
 const sound = new Audio("assets/audio/sonido.mp3");
 
 const selectedTheme = localStorage.getItem("selected-theme");
@@ -74,18 +75,24 @@ const getCurrentTheme = () =>
   body.classList.contains(darkTheme) ? "dark" : "light";
 
 const getCurrentIcon = () =>
-  themeButton.classList.contains(iconTheme) ? "moon" : "sun";
+  themeButton.querySelector('i').classList.contains(iconTheme) ? "sun" : "moon";
 
 if (selectedTheme) {
   body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
-  themeButton.classList[selectedIcon === "moon" ? "add" : "remove"](iconTheme);
+  themeButton.querySelector('i').classList[selectedIcon === "moon" ? "add" : "remove"](iconTheme);
 }
 
 themeButton.addEventListener("click", () => {
-
   body.classList.toggle(darkTheme);
-  themeButton.classList.toggle(iconTheme);
-  navbar.classList.remove("active");
+
+  if (body.classList.contains(darkTheme)) {
+    themeButton.querySelector('i').classList.remove(iconTheme);
+    themeButton.querySelector('i').classList.add(moonIcon);
+  } else {
+    themeButton.querySelector('i').classList.remove(moonIcon);
+    themeButton.querySelector('i').classList.add(iconTheme);
+  }
+
   sound.play();
 
   localStorage.setItem("selected-theme", getCurrentTheme());
