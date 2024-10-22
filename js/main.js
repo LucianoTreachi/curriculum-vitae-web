@@ -6,20 +6,24 @@ const closeMenuButton = document.querySelector(".close-menu-button");
 
 openMenuButton.addEventListener("click", () => {
   navbar.classList.add("active");
+  openMenuButton.setAttribute("aria-expanded", "true");
 })
 
 closeMenuButton.addEventListener("click", () => {
   navbar.classList.remove("active");
+  openMenuButton.setAttribute("aria-expanded", "false");
 })
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
     navbar.classList.remove("active");
+    openMenuButton.setAttribute("aria-expanded", "false");
   })
 })
 
 window.addEventListener("scroll", () => {
   navbar.classList.remove('active');
+  openMenuButton.setAttribute("aria-expanded", "false");
 })
 
 
