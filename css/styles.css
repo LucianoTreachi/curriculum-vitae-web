@@ -175,10 +175,12 @@ header .image img {
   gap: 3rem;
   padding: 6rem 0;
   transition: .4s;
+  visibility: hidden;
 }
 
 .navbar.active {
   right: 0;
+  visibility: visible;
 }
 
 .navbar a {
