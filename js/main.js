@@ -64,7 +64,7 @@ window.addEventListener("scroll", activeLinks);
 const themeButton = document.querySelector(".theme-button");
 const body = document.body;
 const darkTheme = "dark-theme";
-const iconTheme = "ri-sun-fill";
+const sunIcon = "ri-sun-fill";
 const moonIcon = "ri-moon-fill";
 const sound = new Audio("assets/audio/sonido.mp3");
 
@@ -75,32 +75,32 @@ const getCurrentTheme = () =>
   body.classList.contains(darkTheme) ? "dark" : "light";
 
 const getCurrentIcon = () =>
-  themeButton.querySelector('i').classList.contains(iconTheme) ? "sun" : "moon";
+  themeButton.querySelector('i').classList.contains(sunIcon) ? "sun" : "moon";
 
 if (selectedTheme) {
   body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
 
   if (selectedTheme === "dark") {
     themeButton.querySelector('i').classList.add(moonIcon);
-    themeButton.querySelector('i').classList.remove(iconTheme);
+    themeButton.querySelector('i').classList.remove(sunIcon);
   } else {
-    themeButton.querySelector('i').classList.add(iconTheme);
+    themeButton.querySelector('i').classList.add(sunIcon);
     themeButton.querySelector('i').classList.remove(moonIcon);
   }
 } else {
   body.classList.remove(darkTheme);
-  themeButton.querySelector('i').classList.add(iconTheme);
+  themeButton.querySelector('i').classList.add(sunIcon);
 }
 
 themeButton.addEventListener("click", () => {
   body.classList.toggle(darkTheme);
 
   if (body.classList.contains(darkTheme)) {
-    themeButton.querySelector('i').classList.remove(iconTheme);
+    themeButton.querySelector('i').classList.remove(sunIcon);
     themeButton.querySelector('i').classList.add(moonIcon);
   } else {
     themeButton.querySelector('i').classList.remove(moonIcon);
-    themeButton.querySelector('i').classList.add(iconTheme);
+    themeButton.querySelector('i').classList.add(sunIcon);
   }
 
   sound.play();
