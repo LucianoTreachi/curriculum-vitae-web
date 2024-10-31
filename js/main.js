@@ -1,10 +1,14 @@
-////////// MENU //////////
+////////// DOM ELEMENTS //////////
 const openMenuButton = document.querySelector(".open-menu-button");
+const closeMenuButton = document.querySelector(".close-menu-button");
 const navbar = document.querySelector(".navbar");
 const links = document.querySelectorAll(".navbar a")
-const closeMenuButton = document.querySelector(".close-menu-button");
 const overlay = document.querySelector(".overlay");
+const scrollToTopLink = document.querySelector(".scroll-to-top-link");
+const sections = document.querySelectorAll('section')
 
+
+////////// MENU //////////
 openMenuButton.addEventListener("click", () => {
   navbar.classList.add("active");
   overlay.classList.add("active");
@@ -33,8 +37,6 @@ window.addEventListener("scroll", () => {
 
 
 ////////// SCROLL TO TOP LINK //////////
-const scrollToTopLink = document.querySelector(".scroll-to-top-link");
-
 window.addEventListener("scroll", function () {
   scrollToTopLink.classList.toggle("active", window.scrollY > 500);
 });
@@ -51,18 +53,33 @@ scrollToTopLink.addEventListener("click", (event) => {
 
 
 ////////// ACTIVE LINK WITH SCROLL //////////
-const navlinks = document.querySelectorAll('nav a')
-const sections = document.querySelectorAll('section')
-
 function activeLinks() {
   let len = sections.length;
   while (--len && window.scrollY + 97 < sections[len].offsetTop) { }
-  navlinks.forEach(link => link.classList.remove("active"));
-  navlinks[len].classList.add("active");
+  links.forEach(link => link.classList.remove("active"));
+  links[len].classList.add("active");
 }
 
 activeLinks();
 window.addEventListener("scroll", activeLinks);
+
+
+////////// SCROLL TO SECTION //////////
+links.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    const sectionId = link.getAttribute('href').substring(1);
+    const targetSection = document.getElementById(sectionId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
 
 
 //////// THEME ////////// 
