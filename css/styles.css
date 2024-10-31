@@ -85,41 +85,6 @@ a {
 }
 
 /*=============================== 
-SCROLL TO TOP LINK
-================================*/
-
-.scroll-to-top-link {
-  z-index: 10;
-  position: fixed;
-  right: 0;
-  bottom: 20px;
-  width: 45px;
-  height: 45px;
-  background: var(--accent);
-  font-size: 1rem;
-  border-radius: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  transition: .5s ease;
-}
-
-.scroll-to-top-link.active {
-  right: 2rem;
-  opacity: 1;
-  visibility: visible;
-}
-
-.scroll-to-top-link svg {
-  width: 25px;
-  height: 25px;
-  fill: #ffffff;
-}
-
-/*=============================== 
 WRAPPER
 ================================*/
 
@@ -165,7 +130,7 @@ header .image img {
   position: fixed;
   top: 0;
   right: -110%;
-  width: 100%;
+  width: 50%;
   height: 100vh;
   overflow-y: auto;
   background-color: var(--navbar);
@@ -173,9 +138,9 @@ header .image img {
   z-index: 20;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 3rem;
-  padding: 6rem 0;
+  padding: 6rem 3rem;
   transition: .4s;
   visibility: hidden;
 }
@@ -221,9 +186,11 @@ header .image img {
   padding: .8rem;
   z-index: 10;
   position: fixed;
-  top: 50px;
+  top: 2rem;
   right: 2rem;
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 
 .open-menu-button svg {
@@ -238,9 +205,11 @@ header .image img {
   background-color: var(--accent);
   padding: .8rem;
   position: absolute;
-  top: 50px;
+  top: 2rem;
   right: 2rem;
   cursor: pointer;
+  display: grid;
+  place-items: center;
 }
 
 .close-menu-button svg {
@@ -439,6 +408,41 @@ footer {
 }
 
 /*=============================== 
+SCROLL TO TOP LINK
+================================*/
+
+.scroll-to-top-link {
+  z-index: 10;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--accent);
+  font-size: 1rem;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transition: .5s ease;
+}
+
+.scroll-to-top-link.active {
+  right: 2rem;
+  opacity: 1;
+  visibility: visible;
+}
+
+.scroll-to-top-link svg {
+  width: 25px;
+  height: 25px;
+  fill: #ffffff;
+}
+
+/*=============================== 
 RESPONSIVE
 ================================*/
 
@@ -457,7 +461,11 @@ RESPONSIVE
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 574px) {
+
+  .navbar {
+    width: 80%;
+  }
 
   header .image {
     left: 1rem;
