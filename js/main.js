@@ -3,26 +3,31 @@ const openMenuButton = document.querySelector(".open-menu-button");
 const navbar = document.querySelector(".navbar");
 const links = document.querySelectorAll(".navbar a")
 const closeMenuButton = document.querySelector(".close-menu-button");
+const overlay = document.querySelector(".overlay");
 
 openMenuButton.addEventListener("click", () => {
   navbar.classList.add("active");
+  overlay.classList.add("active");
   openMenuButton.setAttribute("aria-expanded", "true");
 })
 
 closeMenuButton.addEventListener("click", () => {
   navbar.classList.remove("active");
+  overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
 })
 
 links.forEach((link) => {
   link.addEventListener("click", () => {
     navbar.classList.remove("active");
+    overlay.classList.remove("active");
     openMenuButton.setAttribute("aria-expanded", "false");
   })
 })
 
 window.addEventListener("scroll", () => {
   navbar.classList.remove('active');
+  overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
 })
 
