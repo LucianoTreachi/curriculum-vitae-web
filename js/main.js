@@ -21,6 +21,12 @@ closeMenuButton.addEventListener("click", () => {
   openMenuButton.setAttribute("aria-expanded", "false");
 })
 
+overlay.addEventListener("click", () => {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+  openMenuButton.setAttribute("aria-expanded", "false");
+})
+
 links.forEach((link) => {
   link.addEventListener("click", () => {
     navbar.classList.remove("active");
