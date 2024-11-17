@@ -12,7 +12,7 @@ GLOBAL
   --body: #d7dde8;
   --wrapper: #f5f5f7;
   --header: #d6e9ff;
-  --navbar: rgba(245, 245, 245, .7);
+  --navbar: #f5f5f5;
   --bg-button-theme: #0297c4;
   --border-img: #f0f0f0;
   --border-bottom: rgba(17, 17, 17, 0.2);
@@ -28,7 +28,7 @@ GLOBAL
   --body: #141e30;
   --wrapper: #0e141b;
   --header: #000000;
-  --navbar: rgba(17, 17, 17, .7);
+  --navbar: #000000;
   --bg-button-theme: #1e2833;
   --border-img: #0297c4;
   --border-bottom: rgba(240, 240, 240, 0.2);
@@ -134,7 +134,6 @@ header .image img {
   height: 100vh;
   overflow-y: auto;
   background-color: var(--navbar);
-  backdrop-filter: blur(20px);
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -296,10 +295,11 @@ SECTION 2: CONTACTO - SOBRE MI
 }
 
 .section2 .container svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
   fill: #8f8f8f;
   vertical-align: middle;
+  transform: translateY(-0.2rem);
 }
 
 /*=============================== 
@@ -328,7 +328,7 @@ SECTION 3: HABILIDADES
 }
 
 /*==================================================== 
-SECTION 4: EXPERIENCIA - EDUCACION 
+SECTION 4: EXPERIENCIA - EDUCACIÓN 
 =====================================================*/
 
 .section4 {
@@ -414,12 +414,18 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
+}
+
+.socials a {
+  display: grid;
+  place-content: center;
+  padding: 0.5rem;
 }
 
 .socials svg {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.2rem;
+  height: 3.2rem;
   fill: var(--grey);
 }
 
