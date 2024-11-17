@@ -410,7 +410,7 @@ footer {
 }
 
 .socials {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -529,7 +529,13 @@ RESPONSIVE
   }
 
   footer {
+    text-align: initial;
     padding: 4rem 2rem;
+  }
+
+  .socials {
+    justify-content: initial;
+    align-items: initial;
   }
 
   .socials svg:hover {
