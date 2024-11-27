@@ -1,15 +1,21 @@
-# Curriculum Vitae Web: Una manera moderna de compartir tu CV
+# Curriculum Vitae Web: Una forma moderna de compartir tu CV
 
-**Curriculum Vitae Web** es una solución interactiva y moderna para presentar tu experiencia profesional, habilidades y datos personales de manera online. Perfecto para destacar en el ámbito profesional y compartir tu información de forma accesible.
+**Curriculum Vitae Web** es una solución interactiva para presentar nuestra experiencia profesional, habilidades y datos personales de manera online.
 
-[![Captura del Curriculum Vitae Web](https://i.postimg.cc/N0BN5KLY/cv.jpg)](https://postimg.cc/RWp1YVcb)
+## Vista previa
+
+[![Captura de pantalla del proyecto](https://i.postimg.cc/N0BN5KLY/cv.jpg)](https://postimg.cc/RWp1YVcb)
 
 ## Características
 
-- **Diseño simple y minimalista**: Fácil de navegar y centrado en la información clave.
+- **Diseño minimalista**: Navegación simple e intuitiva centrada en la información clave.
 - **Enlaces interactivos**: enlaces a plataformas como WhatsApp, Email, LinkedIn, GitHub y Sitio Web.
-- **Responsivo**: Adaptado a cualquier dispositivo, desde computadoras hasta móviles.
+- **Responsivo**: Optimizado para computadoras, tabletas y móviles.
 - **Modo claro y oscuro**: Ideal para diferentes preferencias y condiciones de lectura.
+
+## Comprueba cómo funciona
+
+Accede aquí → [Curriculum Vitae Web](https://curriculumvitaeweb.netlify.app/)
 
 ## Tecnologías utilizadas
 
@@ -17,15 +23,11 @@
 - **CSS:** Estilización y diseño responsivo.
 - **JavaScript:** Funcionalidad interactiva.
 
-## Cómo ver el proyecto en vivo
-
-Desde aquí → [Curriculum Vitae Web](https://curriculumvitaeweb.netlify.app/)
-
 ## Desarrollado por
 
 **Luciano Treachi**
 
-Me dedico a crear soluciones web eficientes, accesibles, intuitivas y fáciles de usar que potencian la experiencia del usuario.
+Soy un Desarrollador Frontend dedicado a crear soluciones web eficientes, accesibles, intuitivas y fáciles de usar que potencian la experiencia del usuario.
 
 [![Sitio Web](https://img.shields.io/badge/Sitio_Web-black?style=for-the-badge&logoColor=white)](https://lucianotreachi.vercel.app/)
 [![linkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logoColor=white)](https://www.linkedin.com/in/luciano-treachi/)
