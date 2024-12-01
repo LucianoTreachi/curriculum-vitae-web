@@ -1,6 +1,6 @@
-# Curriculum Vitae Web: Una forma moderna de compartir tu CV
+# Curriculum Vitae Web: Una forma moderna de compartir el CV
 
-**Curriculum Vitae Web** es una solución interactiva para presentar nuestra experiencia profesional, habilidades y datos personales de manera online.
+**Curriculum Vitae Web** es una solución interactiva para presentar mi experiencia profesional, habilidades y datos personales de manera online.
 
 ## Vista previa
 
