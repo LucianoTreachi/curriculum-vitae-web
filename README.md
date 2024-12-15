@@ -9,19 +9,23 @@
 ## Características
 
 - **Diseño minimalista**: Navegación simple e intuitiva centrada en la información clave.
+
 - **Enlaces interactivos**: enlaces a plataformas como WhatsApp, Email, LinkedIn, GitHub y Sitio Web.
 - **Responsivo**: Optimizado para computadoras, tabletas y móviles.
+
 - **Modo claro y oscuro**: Ideal para diferentes preferencias y condiciones de lectura.
-
-## Comprueba cómo funciona
-
-Accede aquí → [Curriculum Vitae Web](https://curriculumvitaeweb.netlify.app/)
 
 ## Tecnologías utilizadas
 
 - **HTML:** Estructura y contenido.
+
 - **CSS:** Estilización y diseño responsivo.
+
 - **JavaScript:** Funcionalidad interactiva.
+
+## Comprueba cómo funciona
+
+Accede aquí → [Curriculum Vitae Web](https://curriculumvitaeweb.netlify.app/)
 
 ## Desarrollado por
 
