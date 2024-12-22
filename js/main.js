@@ -13,12 +13,18 @@ openMenuButton.addEventListener("click", () => {
   navbar.classList.add("active");
   overlay.classList.add("active");
   openMenuButton.setAttribute("aria-expanded", "true");
+  setTimeout(() => {
+    closeMenuButton.focus();
+  }, 100);
 })
 
 closeMenuButton.addEventListener("click", () => {
   navbar.classList.remove("active");
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
+  setTimeout(() => {
+    openMenuButton.focus();
+  }, 100);
 })
 
 overlay.addEventListener("click", () => {
@@ -111,13 +117,16 @@ if (selectedTheme) {
   if (selectedTheme === "dark") {
     themeButton.querySelector('i').classList.add(moonIcon);
     themeButton.querySelector('i').classList.remove(sunIcon);
+    themeButton.setAttribute("aria-label", "Cambiar a modo claro");
   } else {
     themeButton.querySelector('i').classList.add(sunIcon);
     themeButton.querySelector('i').classList.remove(moonIcon);
+    themeButton.setAttribute("aria-label", "Cambiar a modo oscuro");
   }
 } else {
   body.classList.remove(darkTheme);
   themeButton.querySelector('i').classList.add(sunIcon);
+  themeButton.setAttribute("aria-label", "Cambiar a modo oscuro");
 }
 
 themeButton.addEventListener("click", () => {
@@ -126,9 +135,11 @@ themeButton.addEventListener("click", () => {
   if (body.classList.contains(darkTheme)) {
     themeButton.querySelector('i').classList.remove(sunIcon);
     themeButton.querySelector('i').classList.add(moonIcon);
+    themeButton.setAttribute("aria-label", "Cambiar a modo claro");
   } else {
     themeButton.querySelector('i').classList.remove(moonIcon);
     themeButton.querySelector('i').classList.add(sunIcon);
+    themeButton.setAttribute("aria-label", "Cambiar a modo oscuro");
   }
 
   sound.play();
