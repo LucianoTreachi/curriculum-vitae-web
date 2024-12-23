@@ -77,6 +77,7 @@ function navigateToSection(event, sectionId) {
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
   navbar.setAttribute("aria-hidden", "true");
+  enableScroll()
 }
 
 // Listeners
