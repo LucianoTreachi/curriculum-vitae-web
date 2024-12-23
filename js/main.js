@@ -11,17 +11,20 @@ const scrollToTopLink = document.querySelector(".scroll-to-top-link");
 ////////// MENU //////////
 let cleanupTrapFocus;
 
+// Disables the scroll and adds padding to the body to prevent layout shift when the scrollbar is removed
 function disableScroll() {
   const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
   document.body.style.overflow = "hidden";
   document.body.style.paddingRight = `${scrollBarWidth}px`;
 }
 
+// Restores the body to its original state, enabling scrolling and removing padding
 function enableScroll() {
   document.body.style.overflow = "";
   document.body.style.paddingRight = "";
 }
 
+// Traps focus within a specific element, ensuring that focus only cycles within the element's focusable items
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll("a, button");
   const firstElement = focusableElements[0];
@@ -46,6 +49,7 @@ function trapFocus(element) {
   };
 }
 
+// Opens the menu, enabling the overlay, disabling scrolling, and trapping focus inside the menu
 function openMenu() {
   navbar.classList.add("active");
   overlay.classList.add("active");
@@ -60,6 +64,7 @@ function openMenu() {
   }, 100);
 }
 
+// Closes the menu, removing the overlay, enabling scrolling, and cleaning up focus trapping
 function closeMenu() {
   navbar.classList.remove("active");
   overlay.classList.remove("active");
@@ -74,6 +79,7 @@ function closeMenu() {
   }, 100);
 }
 
+// Handles smooth scrolling to a target section and closes the menu afterward
 function navigateToSection(event, sectionId) {
   event.preventDefault();
   const targetSection = document.querySelector(sectionId);
@@ -94,7 +100,7 @@ openMenuButton.addEventListener("click", openMenu);
 closeMenuButton.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
 
-// Close menu with Escape key
+// Close menu with 'Escape' key
 document.body.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
