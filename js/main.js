@@ -31,16 +31,18 @@ function openMenu() {
   navbar.classList.add("active");
   overlay.classList.add("active");
   openMenuButton.setAttribute("aria-expanded", "true");
+  trapFocus(navbar);
+
   setTimeout(() => {
     closeMenuButton.focus();
   }, 100);
-  trapFocus(navbar);
 }
 
 function closeMenu() {
   navbar.classList.remove("active");
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
+
   setTimeout(() => {
     openMenuButton.focus();
   }, 100);
@@ -52,11 +54,6 @@ function navigateToSection(event, sectionId) {
 
   if (targetSection) {
     targetSection.scrollIntoView({ behavior: "smooth" });
-    setTimeout(() => {
-      const sectionTitle = targetSection.querySelector("h1, h2, h3") || targetSection;
-      sectionTitle.setAttribute("tabindex", "-1");
-      sectionTitle.focus();
-    }, 500);
   }
 
   navbar.classList.remove("active");
