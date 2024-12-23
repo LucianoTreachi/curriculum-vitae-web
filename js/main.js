@@ -9,6 +9,8 @@ const scrollToTopLink = document.querySelector(".scroll-to-top-link");
 
 
 ////////// MENU //////////
+let cleanupTrapFocus;
+
 function disableScroll() {
   const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
   document.body.style.overflow = "hidden";
@@ -25,7 +27,7 @@ function trapFocus(element) {
   const firstElement = focusableElements[0];
   const lastElement = focusableElements[focusableElements.length - 1];
 
-  element.addEventListener("keydown", (event) => {
+  function handleKeydown(event) {
     if (event.key === "Tab") {
       if (event.shiftKey && document.activeElement === firstElement) {
         lastElement.focus();
@@ -35,7 +37,13 @@ function trapFocus(element) {
         event.preventDefault();
       }
     }
-  });
+  };
+
+  element.addEventListener("keydown", handleKeydown);
+
+  return () => {
+    element.removeEventListener("keydown", handleKeydown);
+  };
 }
 
 function openMenu() {
@@ -45,7 +53,7 @@ function openMenu() {
   navbar.setAttribute("aria-hidden", "false");
 
   disableScroll();
-  trapFocus(navbar);
+  cleanupTrapFocus = trapFocus(navbar);
 
   setTimeout(() => {
     closeMenuButton.focus();
@@ -59,6 +67,7 @@ function closeMenu() {
   navbar.setAttribute("aria-hidden", "true");
 
   enableScroll();
+  cleanupTrapFocus();
 
   setTimeout(() => {
     openMenuButton.focus();
