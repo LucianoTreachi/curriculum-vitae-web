@@ -9,6 +9,24 @@ const scrollToTopLink = document.querySelector(".scroll-to-top-link");
 
 
 ////////// MENU //////////
+function trapFocus(element) {
+  const focusableElements = element.querySelectorAll("a, button");
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+
+  element.addEventListener("keydown", (event) => {
+    if (event.key === "Tab") {
+      if (event.shiftKey && document.activeElement === firstElement) {
+        lastElement.focus();
+        event.preventDefault();
+      } else if (!event.shiftKey && document.activeElement === lastElement) {
+        firstElement.focus();
+        event.preventDefault();
+      }
+    }
+  });
+}
+
 function openMenu() {
   navbar.classList.add("active");
   overlay.classList.add("active");
@@ -16,6 +34,7 @@ function openMenu() {
   setTimeout(() => {
     closeMenuButton.focus();
   }, 100);
+  trapFocus(navbar);
 }
 
 function closeMenu() {
@@ -45,24 +64,19 @@ function navigateToSection(event, sectionId) {
   openMenuButton.setAttribute("aria-expanded", "false");
 }
 
-openMenuButton.addEventListener("click", () => {
-  openMenu();
-})
+// Listeners
+openMenuButton.addEventListener("click", openMenu);
+closeMenuButton.addEventListener("click", closeMenu);
+overlay.addEventListener("click", closeMenu);
 
+// Close menu with Escape key
 document.body.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeMenu();
   }
 });
 
-closeMenuButton.addEventListener("click", () => {
-  closeMenu();
-})
-
-overlay.addEventListener("click", () => {
-  closeMenu();
-})
-
+// Navigation links
 links.forEach((link) => {
   link.addEventListener("click", (event) => {
     const sectionId = link.getAttribute("href");
