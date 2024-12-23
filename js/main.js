@@ -31,6 +31,7 @@ function openMenu() {
   navbar.classList.add("active");
   overlay.classList.add("active");
   openMenuButton.setAttribute("aria-expanded", "true");
+  navbar.setAttribute("aria-hidden", "false");
   trapFocus(navbar);
 
   setTimeout(() => {
@@ -42,6 +43,7 @@ function closeMenu() {
   navbar.classList.remove("active");
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
+  navbar.setAttribute("aria-hidden", "true");
 
   setTimeout(() => {
     openMenuButton.focus();
@@ -59,6 +61,7 @@ function navigateToSection(event, sectionId) {
   navbar.classList.remove("active");
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
+  navbar.setAttribute("aria-hidden", "true");
 }
 
 // Listeners
