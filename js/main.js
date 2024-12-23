@@ -9,6 +9,17 @@ const scrollToTopLink = document.querySelector(".scroll-to-top-link");
 
 
 ////////// MENU //////////
+function disableScroll() {
+  const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+  document.body.style.overflow = "hidden";
+  document.body.style.paddingRight = `${scrollBarWidth}px`;
+}
+
+function enableScroll() {
+  document.body.style.overflow = "";
+  document.body.style.paddingRight = "";
+}
+
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll("a, button");
   const firstElement = focusableElements[0];
@@ -32,6 +43,8 @@ function openMenu() {
   overlay.classList.add("active");
   openMenuButton.setAttribute("aria-expanded", "true");
   navbar.setAttribute("aria-hidden", "false");
+
+  disableScroll();
   trapFocus(navbar);
 
   setTimeout(() => {
@@ -44,6 +57,8 @@ function closeMenu() {
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
   navbar.setAttribute("aria-hidden", "true");
+
+  enableScroll();
 
   setTimeout(() => {
     openMenuButton.focus();
