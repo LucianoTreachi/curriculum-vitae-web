@@ -537,3 +537,9 @@ RESPONSIVE
     width: 80%;
   }
 }
+
+@media (max-width: 320px) {
+  html {
+    font-size: 60%;
+  }
+}
