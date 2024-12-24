@@ -158,53 +158,55 @@ scrollToTopLink.addEventListener("click", (event) => {
 //////// THEME ////////// 
 const themeButton = document.querySelector(".theme-button");
 const body = document.body;
-const darkTheme = "dark-theme";
-const sunIcon = "ri-sun-fill";
-const moonIcon = "ri-moon-fill";
+const darkThemeClass = "dark-theme";
+const moonIcon = document.querySelector(".moon-icon");
+const sunIcon = document.querySelector(".sun-icon");
 const sound = new Audio("assets/audio/sonido.mp3");
 
+// Retrieve previously selected theme and icon from localStorage
 const selectedTheme = localStorage.getItem("selected-theme");
 const selectedIcon = localStorage.getItem("selected-icon");
 
-const getCurrentTheme = () =>
-  body.classList.contains(darkTheme) ? "dark" : "light";
+// Get the current theme based on body class
+const getCurrentTheme = () => body.classList.contains(darkThemeClass) ? "dark" : "light";
 
-const getCurrentIcon = () =>
-  themeButton.querySelector('i').classList.contains(sunIcon) ? "sun" : "moon";
-
-if (selectedTheme) {
-  body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
-
-  if (selectedTheme === "dark") {
-    themeButton.querySelector('i').classList.add(moonIcon);
-    themeButton.querySelector('i').classList.remove(sunIcon);
+// Update icons and `aria-label` based on the theme
+const updateIconsAndAriaLabel = (theme) => {
+  if (theme === "dark") {
+    moonIcon.style.display = "block";
+    sunIcon.style.display = "none";
     themeButton.setAttribute("aria-label", "Cambiar a modo claro");
   } else {
-    themeButton.querySelector('i').classList.add(sunIcon);
-    themeButton.querySelector('i').classList.remove(moonIcon);
+    moonIcon.style.display = "none";
+    sunIcon.style.display = "block";
     themeButton.setAttribute("aria-label", "Cambiar a modo oscuro");
   }
+};
+
+// If a theme was previously selected, apply it
+if (selectedTheme) {
+  body.classList[selectedTheme === "dark" ? "add" : "remove"](darkThemeClass);
+  updateIconsAndAriaLabel(selectedTheme);
 } else {
-  body.classList.remove(darkTheme);
-  themeButton.querySelector('i').classList.add(sunIcon);
-  themeButton.setAttribute("aria-label", "Cambiar a modo oscuro");
+  body.classList.remove(darkThemeClass);
+  updateIconsAndAriaLabel("light");
 }
 
+// Event listener for theme button click
 themeButton.addEventListener("click", () => {
-  body.classList.toggle(darkTheme);
+  const currentTheme = getCurrentTheme();
+  const newTheme = currentTheme === "dark" ? "light" : "dark";
 
-  if (body.classList.contains(darkTheme)) {
-    themeButton.querySelector('i').classList.remove(sunIcon);
-    themeButton.querySelector('i').classList.add(moonIcon);
-    themeButton.setAttribute("aria-label", "Cambiar a modo claro");
-  } else {
-    themeButton.querySelector('i').classList.remove(moonIcon);
-    themeButton.querySelector('i').classList.add(sunIcon);
-    themeButton.setAttribute("aria-label", "Cambiar a modo oscuro");
-  }
+  // Apply the new theme by toggling the class
+  body.classList.toggle(darkThemeClass);
 
+  // Update the icons and aria-label based on the new theme
+  updateIconsAndAriaLabel(newTheme);
+
+  // Play theme change sound
   sound.play();
 
-  localStorage.setItem("selected-theme", getCurrentTheme());
-  localStorage.setItem("selected-icon", getCurrentIcon());
+  // Store the selected theme and icon in localStorage
+  localStorage.setItem("selected-theme", newTheme);
+  localStorage.setItem("selected-icon", newTheme === "dark" ? "moon" : "sun");
 });

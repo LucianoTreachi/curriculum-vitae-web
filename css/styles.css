@@ -134,6 +134,26 @@ header .image img {
   object-fit: cover;
 }
 
+.open-menu-button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent);
+  padding: .8rem;
+  z-index: 10;
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.open-menu-button svg {
+  fill: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -155,6 +175,25 @@ header .image img {
 .navbar.active {
   right: 0;
   visibility: visible;
+}
+
+.close-menu-button {
+  border: none;
+  border-radius: 5px;
+  background-color: var(--accent);
+  padding: .8rem;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.close-menu-button svg {
+  fill: #ffffff;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
 .nav-link {
@@ -191,53 +230,16 @@ header .image img {
   place-items: center;
 }
 
-.ri-moon-fill {
-  font-size: 2.4rem;
-  color: lightskyblue;
+.moon-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: lightskyblue;
 }
 
-.ri-sun-fill {
-  font-size: 2.4rem;
-  color: lightsalmon;
-}
-
-.open-menu-button {
-  border: none;
-  border-radius: 5px;
-  background-color: var(--accent);
-  padding: .8rem;
-  z-index: 10;
-  position: fixed;
-  top: 2rem;
-  right: 2rem;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-}
-
-.open-menu-button svg {
-  fill: #ffffff;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.close-menu-button {
-  border: none;
-  border-radius: 5px;
-  background-color: var(--accent);
-  padding: .8rem;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-}
-
-.close-menu-button svg {
-  fill: #ffffff;
-  width: 2.5rem;
-  height: 2.5rem;
+.sun-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  fill: lightsalmon;
 }
 
 .overlay {
