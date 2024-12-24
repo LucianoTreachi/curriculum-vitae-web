@@ -10,21 +10,22 @@ const scrollToTopLink = document.querySelector(".scroll-to-top-link");
 
 ////////// MENU //////////
 let cleanupTrapFocus;
+let isMenuOpen = false;
 
-// Disables the scroll and adds padding to the body to prevent layout shift when the scrollbar is removed
+// Disable the scroll on the body and adds padding to prevent layout shift when the scrollbar is removed
 function disableScroll() {
   const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
   document.body.style.overflow = "hidden";
   document.body.style.paddingRight = `${scrollBarWidth}px`;
 }
 
-// Restores the body to its original state, enabling scrolling and removing padding
+// Restore body scrolling and remove padding
 function enableScroll() {
   document.body.style.overflow = "";
   document.body.style.paddingRight = "";
 }
 
-// Traps focus within a specific element, ensuring that focus only cycles within the element's focusable items
+// Trap focus within an element, ensuring focus cycles only among its focusable items
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll("a, button");
   const firstElement = focusableElements[0];
@@ -49,8 +50,10 @@ function trapFocus(element) {
   };
 }
 
-// Opens the menu, enabling the overlay, disabling scrolling, and trapping focus inside the menu
+// Open the menu, show the overlay, disable scrolling, and trap focus within the menu
 function openMenu() {
+  if (isMenuOpen) return;
+
   navbar.classList.add("active");
   overlay.classList.add("active");
   openMenuButton.setAttribute("aria-expanded", "true");
@@ -58,14 +61,19 @@ function openMenu() {
 
   disableScroll();
   cleanupTrapFocus = trapFocus(navbar);
+  isMenuOpen = true;
+
+  document.body.addEventListener("keydown", handleEscapeKey);
 
   setTimeout(() => {
     closeMenuButton.focus();
   }, 100);
 }
 
-// Closes the menu, removing the overlay, enabling scrolling, and cleaning up focus trapping
+// Close the menu, hide the overlay, enable scrolling, and clean up focus trapping
 function closeMenu() {
+  if (!isMenuOpen) return;
+
   navbar.classList.remove("active");
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
@@ -73,13 +81,16 @@ function closeMenu() {
 
   enableScroll();
   cleanupTrapFocus();
+  isMenuOpen = false;
+
+  document.body.removeEventListener("keydown", handleEscapeKey);
 
   setTimeout(() => {
     openMenuButton.focus();
   }, 100);
 }
 
-// Handles smooth scrolling to a target section and closes the menu afterward
+// Smoothly scroll to a target section and close the menu afterward
 function navigateToSection(event, sectionId) {
   event.preventDefault();
   const targetSection = document.querySelector(sectionId);
@@ -93,19 +104,20 @@ function navigateToSection(event, sectionId) {
   openMenuButton.setAttribute("aria-expanded", "false");
   navbar.setAttribute("aria-hidden", "true");
   enableScroll()
+  isMenuOpen = false;
+}
+
+// Close the menu when the 'Escape' key is pressed
+function handleEscapeKey(event) {
+  if (event.key === "Escape") {
+    closeMenu();
+  }
 }
 
 // Listeners
 openMenuButton.addEventListener("click", openMenu);
 closeMenuButton.addEventListener("click", closeMenu);
 overlay.addEventListener("click", closeMenu);
-
-// Close menu with 'Escape' key
-document.body.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeMenu();
-  }
-});
 
 // Navigation links
 navLinks.forEach((link) => {
