@@ -1,5 +1,6 @@
 ////////// DOM ELEMENTS //////////
-const wrapper = document.querySelector(".wrapper");
+const mainSection = document.querySelector("main");
+const footerSection = document.querySelector("footer");
 const openMenuButton = document.querySelector(".open-menu-button");
 const closeMenuButton = document.querySelector(".close-menu-button");
 const navbar = document.querySelector(".navbar");
@@ -59,7 +60,8 @@ function openMenu() {
   overlay.classList.add("active");
   openMenuButton.setAttribute("aria-expanded", "true");
   navbar.setAttribute("aria-hidden", "false");
-  wrapper.setAttribute("aria-hidden", "true");
+  mainSection.setAttribute("aria-hidden", "true");
+  footerSection.setAttribute("aria-hidden", "true");
 
   disableScroll();
   cleanupTrapFocus = trapFocus(navbar);
@@ -80,7 +82,8 @@ function closeMenu() {
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
   navbar.setAttribute("aria-hidden", "true");
-  wrapper.setAttribute("aria-hidden", "false");
+  mainSection.setAttribute("aria-hidden", "false");
+  footerSection.setAttribute("aria-hidden", "false");
 
   enableScroll();
   cleanupTrapFocus();
@@ -106,7 +109,8 @@ function navigateToSection(event, sectionId) {
   overlay.classList.remove("active");
   openMenuButton.setAttribute("aria-expanded", "false");
   navbar.setAttribute("aria-hidden", "true");
-  wrapper.setAttribute("aria-hidden", "false");
+  mainSection.setAttribute("aria-hidden", "false");
+  footerSection.setAttribute("aria-hidden", "false");
   enableScroll()
   isMenuOpen = false;
 }
