@@ -424,33 +424,12 @@ footer {
   padding: 4rem 6rem;
   background-color: var(--header);
   border-radius: 5px 5px 0 0;
+}
+
+footer p {
   text-align: center;
   font-size: 1.4rem;
   color: var(--black);
-}
-
-.socials {
-  margin-top: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.socials a {
-  display: grid;
-  place-content: center;
-  padding: 0.5rem;
-}
-
-.socials svg {
-  width: 3.2rem;
-  height: 3.2rem;
-  fill: var(--grey);
-}
-
-.socials svg:hover {
-  fill: var(--accent);
 }
 
 /*=============================== 
@@ -553,12 +532,8 @@ RESPONSIVE
     padding: 4rem 2rem;
   }
 
-  .socials {
-    justify-content: initial;
-    align-items: initial;
-  }
-
-  .socials svg:hover {
-    fill: var(--grey);
+  footer p {
+    text-align: initial;
+    width: 80%;
   }
 }
