@@ -2,7 +2,7 @@
 const openMenuButton = document.querySelector(".open-menu-button");
 const closeMenuButton = document.querySelector(".close-menu-button");
 const navbar = document.querySelector(".navbar");
-const links = document.querySelectorAll(".navbar a")
+const navLinks = document.querySelectorAll(".nav-link")
 const overlay = document.querySelector(".overlay");
 const sections = document.querySelectorAll('section')
 const scrollToTopLink = document.querySelector(".scroll-to-top-link");
@@ -108,7 +108,7 @@ document.body.addEventListener("keydown", (event) => {
 });
 
 // Navigation links
-links.forEach((link) => {
+navLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
     const sectionId = link.getAttribute("href");
     navigateToSection(event, sectionId);
@@ -117,15 +117,15 @@ links.forEach((link) => {
 
 
 ////////// ACTIVE LINK WITH SCROLL //////////
-function activeLinks() {
+function activeNavLinks() {
   let len = sections.length;
   while (--len && window.scrollY + 97 < sections[len].offsetTop) { }
-  links.forEach(link => link.classList.remove("active"));
-  links[len].classList.add("active");
+  navLinks.forEach(link => link.classList.remove("active"));
+  navLinks[len].classList.add("active");
 }
 
-activeLinks();
-window.addEventListener("scroll", activeLinks);
+activeNavLinks();
+window.addEventListener("scroll", activeNavLinks);
 
 
 ////////// SCROLL TO TOP LINK //////////
