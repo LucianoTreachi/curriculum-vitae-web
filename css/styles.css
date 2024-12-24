@@ -76,6 +76,14 @@ a {
   text-decoration: none;
 }
 
+button {
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
 .title-section {
   font-size: 2rem;
   font-weight: 700;
@@ -149,13 +157,28 @@ header .image img {
   visibility: visible;
 }
 
-.navbar a {
+.nav-link {
+  position: relative;
   font-size: 1.9rem;
   color: var(--black);
 }
 
-.navbar a.active {
-  border-bottom: 4px solid var(--accent);
+.nav-link::before {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background-color: var(--accent);
+}
+
+.nav-link:hover::before {
+  width: 100%;
+}
+
+.nav-link.active::before {
+  width: 100%;
 }
 
 .theme-button {
