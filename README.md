@@ -11,7 +11,7 @@
 - **Diseño minimalista**: Navegación simple e intuitiva centrada en la información clave.
 
 - **Enlaces interactivos**: enlaces a plataformas como WhatsApp, Email, LinkedIn, GitHub y Sitio Web.
-- **Responsivo**: Optimizado para computadoras, tabletas y móviles.
+- **Responsivo**: Optimizado para computadoras, tablets y móviles.
 
 - **Modo claro y oscuro**: Ideal para diferentes preferencias y condiciones de lectura.
 
