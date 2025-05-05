@@ -41,11 +41,12 @@
 }
 
 html {
-  font-family: 'Poppins', sans-serif;
-  letter-spacing: 0.02em;
+  font-size: 100%;
 }
 
 body {
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.02em;
   background: var(--body)
 }
 
