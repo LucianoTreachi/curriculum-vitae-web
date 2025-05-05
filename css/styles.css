@@ -450,14 +450,16 @@ footer p {
 
 /* RESPONSIVE */
 
-@media screen and (max-width: 1200px) {
+/* 1200px */
+@media screen and (max-width: 75em) {
 
   .wrapper {
     width: 90%;
   }
 }
 
-@media screen and (max-width: 920px) {
+/* 920px */
+@media screen and (max-width: 57.5em) {
 
   .wrapper {
     width: 100%;
@@ -465,7 +467,8 @@ footer p {
   }
 }
 
-@media screen and (max-width: 576px) {
+/* 576px */
+@media screen and (max-width: 36em) {
 
   .navbar {
     width: 80%;
@@ -517,7 +520,8 @@ footer p {
   }
 }
 
-@media screen and (max-width: 320px) {
+/* 320px */
+@media screen and (max-width: 20em) {
   html {
     font-size: 60%;
   }
