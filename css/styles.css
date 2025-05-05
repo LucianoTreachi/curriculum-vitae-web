@@ -41,7 +41,6 @@
 }
 
 html {
-  font-size: 62.5%;
   font-family: 'Poppins', sans-serif;
   letter-spacing: 0.02em;
 }
@@ -58,7 +57,7 @@ h4 {
 }
 
 p {
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: var(--paragraph-weight);
   color: var(--black);
   opacity: 0.8;
@@ -82,11 +81,11 @@ button:hover {
 }
 
 .title-section {
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: 700;
   color: var(--accent);
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  margin-bottom: 0.625rem;
 }
 
 /* WRAPPER */
@@ -94,9 +93,8 @@ button:hover {
 .wrapper {
   width: 60%;
   margin: 2rem auto;
-  max-width: 1200px;
+  max-width: 75rem;
   background: var(--wrapper);
-  border-radius: 5px;
 }
 
 /* HEADER AND NAV */
@@ -104,7 +102,7 @@ button:hover {
 header {
   position: relative;
   width: 100%;
-  height: 150px;
+  height: 9.375rem;
   background-color: var(--header);
   border-radius: 0px 0px 5px 5px;
   box-shadow: var(--box-shadow);
@@ -112,10 +110,10 @@ header {
 
 header .image {
   position: absolute;
-  top: 50px;
-  left: 40px;
-  width: 200px;
-  height: 200px;
+  top: 3.75rem;
+  left: 2.75rem;
+  width: 11rem;
+  height: 11rem;
   border-radius: 50%;
   border: 4px solid var(--accent);
   overflow: hidden;
@@ -129,13 +127,13 @@ header .image img {
 
 .open-menu-button {
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.5rem;
   z-index: 10;
   position: fixed;
-  top: 2rem;
-  right: 2rem;
+  top: 1.25rem;
+  right: 1.25rem;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -143,8 +141,8 @@ header .image img {
 
 .open-menu-button svg {
   fill: #ffffff;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .navbar {
@@ -159,8 +157,8 @@ header .image img {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 3rem;
-  padding: 6rem 5rem;
+  gap: 1.75rem;
+  padding: 3.75rem 3.125rem;
   transition: .4s;
   visibility: hidden;
 }
@@ -172,12 +170,12 @@ header .image img {
 
 .close-menu-button {
   border: none;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   background-color: var(--accent);
-  padding: .8rem;
+  padding: 0.5rem;
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 1.25rem;
+  right: 1.25rem;
   cursor: pointer;
   display: grid;
   place-items: center;
@@ -185,13 +183,13 @@ header .image img {
 
 .close-menu-button svg {
   fill: #ffffff;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
 .nav-link {
   position: relative;
-  font-size: 1.9rem;
+  font-size: 1.125rem;
   color: var(--black);
 }
 
@@ -216,7 +214,7 @@ header .image img {
 .theme-button {
   border: none;
   background-color: var(--bg-button-theme);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 100%;
   cursor: pointer;
   display: grid;
@@ -224,14 +222,14 @@ header .image img {
 }
 
 .moon-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: lightskyblue;
 }
 
 .sun-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: lightsalmon;
 }
 
@@ -258,16 +256,16 @@ header .image img {
 /* SECTION 1: HOME */
 
 .section1 {
-  padding: 12rem 6rem 0;
+  padding: 7.5rem 3.75rem 0;
 }
 
 .section1 .container {
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   border-bottom: 3px solid var(--border-bottom);
 }
 
 .section1 .container h1 {
-  font-size: 4rem;
+  font-size: 2.5rem;
   font-weight: 600;
   color: var(--black);
   opacity: 0.9;
@@ -280,28 +278,28 @@ header .image img {
 /* SECTION 2: CONTACTO - SOBRE MI */
 
 .section2 {
-  padding: 4rem 6rem 0;
+  padding: 2.5rem 3.75rem 0;
 }
 
 .section2 .container {
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   border-bottom: 3px solid var(--border-bottom);
 }
 
 .section2 .container a {
   display: inline-block;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--black);
   opacity: 0.8;
 }
 
 .section2 .container a:nth-child(2) {
-  margin-top: 2rem;
+  margin-top: 1.25rem;
 }
 
 .section2 .container a:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
 }
 
 .section2 .container a:hover {
@@ -309,8 +307,8 @@ header .image img {
 }
 
 .section2 .container svg {
-  width: 3.2rem;
-  height: 3.2rem;
+  width: 2rem;
+  height: 2rem;
   fill: #8f8f8f;
   vertical-align: middle;
   transform: translateY(-0.2rem);
@@ -319,42 +317,41 @@ header .image img {
 /* SECTION 3: HABILIDADES */
 
 .section3 {
-  padding: 4rem 6rem 0;
+  padding: 2.5rem 3.75rem 0;
 }
 
 .section3 .container {
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   border-bottom: 3px solid var(--border-bottom);
 }
 
 .logos {
-  margin-top: 3rem;
+  margin-top: 1.875rem;
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 1.25rem;
 }
 
 /* SECTION 4: EXPERIENCIA - EDUCACIÓN */
 
 .section4 {
-  padding: 4rem 6rem 0;
+  padding: 2.5rem 3.75rem 0;
 }
 
 .section4 .container {
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
   border-bottom: 3px solid var(--border-bottom);
 }
 
 .section4 .final-container {
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
 }
 
 .section4 .box {
-  margin-top: 4rem;
-  line-height: 25px;
+  margin-top: 2.5rem;
   background-color: var(--box);
-  padding: 2rem;
-  border-radius: 5px;
+  padding: 1.25rem;
+  border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   position: relative;
 }
@@ -380,21 +377,21 @@ header .image img {
 }
 
 .section4 .box .info h3 {
-  font-size: 1.7rem;
+  font-size: 1.125rem;
   font-weight: 600;
   color: var(--black);
   width: 90%;
 }
 
 .section4 .box .info h4 {
-  font-size: 1.5rem;
+  font-size: 0.875rem;
   font-weight: 400;
   color: var(--black);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .section4 .box .info p {
-  font-size: 1.3rem;
+  font-size: 0.75rem;
 }
 
 #education .container {
@@ -404,14 +401,14 @@ header .image img {
 /* FOOTER */
 
 footer {
-  padding: 4rem 6rem;
+  padding: 2.5rem 3.75rem;
   background-color: var(--header);
   border-radius: 5px 5px 0 0;
 }
 
 footer p {
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 0.875rem;
   color: var(--black);
 }
 
@@ -421,12 +418,12 @@ footer p {
   z-index: 10;
   position: fixed;
   right: 0;
-  bottom: 20px;
-  width: 45px;
-  height: 45px;
+  bottom: 1.25rem;
+  width: 2.5rem;
+  height: 2.5rem;
   background: var(--accent);
-  font-size: 1rem;
-  border-radius: 5px;
+  font-size: 0.625rem;
+  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -437,14 +434,14 @@ footer p {
 }
 
 .scroll-to-top-link.active {
-  right: 2rem;
+  right: 1.25rem;
   opacity: 1;
   visibility: visible;
 }
 
 .scroll-to-top-link svg {
-  width: 25px;
-  height: 25px;
+  width: 1.5rem;
+  height: 1.5rem;
   fill: #ffffff;
 }
 
@@ -475,21 +472,21 @@ footer p {
   }
 
   header .image {
-    left: 1rem;
+    left: 0.625rem;
   }
 
   .section1 {
-    padding: 12rem 2rem 0;
+    padding: 7.5rem 1.25rem 0;
   }
 
   .section2,
   .section3,
   .section4 {
-    padding: 4rem 2rem 0;
+    padding: 2.5rem 1.25rem 0;
   }
 
   .section1 .container h1 {
-    font-size: 3.2rem;
+    font-size: 2rem;
   }
 
   .section1 .container p {
@@ -501,8 +498,8 @@ footer p {
   }
 
   .logos img {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
   }
 
   .section4 .box .info img {
@@ -511,7 +508,7 @@ footer p {
 
   footer {
     text-align: initial;
-    padding: 4rem 2rem;
+    padding: 2.5rem 1.25rem;
   }
 
   footer p {
