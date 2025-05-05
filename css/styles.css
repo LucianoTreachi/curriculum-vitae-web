@@ -1,6 +1,4 @@
-/*=============================== 
-GLOBAL
-================================*/
+/* GLOBAL */
 
 :root {
   scroll-behavior: smooth;
@@ -21,7 +19,6 @@ GLOBAL
   --paragraph-weight: 400;
 }
 
-/* ----- Dark Theme -----*/
 .dark-theme {
   --black: #f0f0f0;
   --white: #181818;
@@ -92,9 +89,7 @@ button:hover {
   margin-bottom: 1rem;
 }
 
-/*=============================== 
-WRAPPER
-================================*/
+/* WRAPPER */
 
 .wrapper {
   width: 60%;
@@ -104,9 +99,7 @@ WRAPPER
   border-radius: 5px;
 }
 
-/*=============================== 
-HEADER AND NAV
-================================*/
+/* HEADER AND NAV */
 
 header {
   position: relative;
@@ -262,9 +255,7 @@ header .image img {
   pointer-events: all;
 }
 
-/*=============================== 
-SECTION 1: HOME
-================================*/
+/* SECTION 1: HOME */
 
 .section1 {
   padding: 12rem 6rem 0;
@@ -286,9 +277,7 @@ SECTION 1: HOME
   margin-bottom: 0.5rem;
 }
 
-/*=============================== 
-SECTION 2: CONTACTO - SOBRE MI
-================================*/
+/* SECTION 2: CONTACTO - SOBRE MI */
 
 .section2 {
   padding: 4rem 6rem 0;
@@ -327,9 +316,7 @@ SECTION 2: CONTACTO - SOBRE MI
   transform: translateY(-0.2rem);
 }
 
-/*=============================== 
-SECTION 3: HABILIDADES
-================================*/
+/* SECTION 3: HABILIDADES */
 
 .section3 {
   padding: 4rem 6rem 0;
@@ -347,9 +334,7 @@ SECTION 3: HABILIDADES
   gap: 2rem;
 }
 
-/*==================================================== 
-SECTION 4: EXPERIENCIA - EDUCACIÓN 
-=====================================================*/
+/* SECTION 4: EXPERIENCIA - EDUCACIÓN */
 
 .section4 {
   padding: 4rem 6rem 0;
@@ -416,9 +401,7 @@ SECTION 4: EXPERIENCIA - EDUCACIÓN
   border-bottom: none;
 }
 
-/*=============================== 
-FOOTER
-================================*/
+/* FOOTER */
 
 footer {
   padding: 4rem 6rem;
@@ -432,9 +415,7 @@ footer p {
   color: var(--black);
 }
 
-/*=============================== 
-SCROLL TO TOP LINK
-================================*/
+/* SCROLL TO TOP LINK */
 
 .scroll-to-top-link {
   z-index: 10;
@@ -467,9 +448,7 @@ SCROLL TO TOP LINK
   fill: #ffffff;
 }
 
-/*=============================== 
-RESPONSIVE
-================================*/
+/* RESPONSIVE */
 
 @media (max-width: 1200px) {
 
