@@ -101,7 +101,7 @@ button:hover {
 header {
   position: relative;
   width: 100%;
-  height: 9.375rem;
+  height: 8.75rem;
   background-color: var(--header);
   border-radius: 0px 0px 5px 5px;
   box-shadow: var(--box-shadow);
@@ -109,10 +109,10 @@ header {
 
 header .image {
   position: absolute;
-  top: 3.75rem;
+  top: 2.75rem;
   left: 2.75rem;
-  width: 11rem;
-  height: 11rem;
+  width: 11.5rem;
+  height: 11.5rem;
   border-radius: 50%;
   border: 4px solid var(--accent);
   overflow: hidden;
