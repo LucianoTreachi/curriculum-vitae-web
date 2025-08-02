@@ -6,6 +6,7 @@ const openMenuButton = document.querySelector(".open-menu-button");
 const closeMenuButton = document.querySelector(".close-menu-button");
 const navbar = document.querySelector(".navbar");
 const navLinks = document.querySelectorAll(".nav-link")
+const firstNavLink = navLinks[0];
 const overlay = document.querySelector(".overlay");
 const sections = document.querySelectorAll('section')
 const scrollToTopLink = document.querySelector(".scroll-to-top-link");
@@ -73,7 +74,7 @@ function openMenu() {
   document.body.addEventListener("keydown", handleEscapeKey);
 
   setTimeout(() => {
-    closeMenuButton.focus();
+    firstNavLink.focus();
   }, 100);
 }
 
@@ -98,7 +99,7 @@ function closeMenu() {
 
   setTimeout(() => {
     openMenuButton.focus();
-  }, 100);
+  }, 400);
 }
 
 // Smoothly scroll to a target section and close the menu afterward
