@@ -121,6 +121,21 @@ function navigateToSection(event, sectionId) {
   navbar.setAttribute("aria-hidden", "true");
   enableScroll()
   isMenuOpen = false;
+
+  // For the screen reader
+  let liveRegion = document.getElementById('live-region');
+  if (!liveRegion) {
+    liveRegion = document.createElement('div');
+    liveRegion.id = 'live-region';
+    liveRegion.setAttribute('aria-live', 'polite');
+    liveRegion.setAttribute('style', 'position: absolute; left: -9999px;');
+    document.body.appendChild(liveRegion);
+  }
+
+  // Announce the full content of the section
+  setTimeout(() => {
+    liveRegion.textContent = targetSection.textContent;
+  }, 400);
 }
 
 // Close the menu when the 'Escape' key is pressed
