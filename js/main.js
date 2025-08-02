@@ -75,7 +75,7 @@ function openMenu() {
 
   setTimeout(() => {
     firstNavLink.focus();
-  }, 100);
+  }, 400);
 }
 
 // Close the menu, hide the overlay, enable scrolling, and clean up focus trapping
