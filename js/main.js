@@ -16,20 +16,20 @@ const scrollToTopLink = document.querySelector(".scroll-to-top-link");
 let cleanupTrapFocus;
 let isMenuOpen = false;
 
-// Disable the scroll on the body and adds padding to prevent layout shift when the scrollbar is removed
+// Hide scrollbar and prevent layout shift by adding padding
 function disableScroll() {
   const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
   document.body.style.overflow = "hidden";
   document.body.style.paddingRight = `${scrollBarWidth}px`;
 }
 
-// Restore body scrolling and remove padding
+// Restore scrolling and remove added padding
 function enableScroll() {
   document.body.style.overflow = "";
   document.body.style.paddingRight = "";
 }
 
-// Trap focus within an element, ensuring focus cycles only among its focusable items
+// Trap focus within navbar (for screen readers)
 function trapFocus(element) {
   const focusableElements = element.querySelectorAll("a, button");
   const firstElement = focusableElements[0];
@@ -54,7 +54,7 @@ function trapFocus(element) {
   };
 }
 
-// Open the menu, show the overlay, disable scrolling, and trap focus within the menu
+// Open menu, show overlay, disable scrolling, and trap focus within navbar
 function openMenu() {
   if (isMenuOpen) return;
 
@@ -78,7 +78,7 @@ function openMenu() {
   }, 400);
 }
 
-// Close the menu, hide the overlay, enable scrolling, and clean up focus trapping
+// Close menu, hide overlay, enable scrolling, and clean up focus trapping
 function closeMenu() {
   if (!isMenuOpen) return;
 
@@ -102,7 +102,7 @@ function closeMenu() {
   }, 400);
 }
 
-// Smoothly scroll to a target section and close the menu afterward
+// Smoothly scroll to target section and close menu afterward
 function navigateToSection(event, sectionId) {
   event.preventDefault();
   const targetSection = document.querySelector(sectionId);
@@ -138,7 +138,7 @@ function navigateToSection(event, sectionId) {
   }, 400);
 }
 
-// Close the menu when the 'Escape' key is pressed
+// Close menu when the 'Escape' key is pressed
 function handleEscapeKey(event) {
   if (event.key === "Escape") {
     closeMenu();
